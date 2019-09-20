@@ -27,7 +27,6 @@ int main(int argc, char* argv[]){
 }
 
 void lexer(){
-  bool tokenFound = false;
   string token = "";
   char c;
   do{
@@ -129,5 +128,5 @@ bool isKeyword(string tok){
       return true;
     }
   }
-  return true;
+  return false;
 }
