@@ -30,10 +30,6 @@ void lexer(){
   bool tokenFound = false;
   string token = "";
   char c;
-  // while(!inFile.eof()){
-  //   inFile.get(c);
-  //   cout << c;
-  // }
   do{
     inFile.get(c);
     if(isTerminating(c)){
@@ -62,6 +58,9 @@ void lexer(){
             printf("%-15s %-25s\n", "identifier", token.c_str());
           }
           token = "";
+          token += c;
+          printf("%-15s %-25s\n", "separator", token.c_str());
+          token = "";
         }
       }
     }
@@ -83,10 +82,11 @@ void lexer(){
 
 void readfile(){
   string fname = "";
-  cout << "Enter file name: ";
-  cin >> fname;
+  //cout << "Enter file name: ";
+  //cin >> fname;
   try{
-    inFile.open(fname);
+    //inFile.open(fname);
+    inFile.open("code.txt");
     if(!inFile.is_open()){
       string err = "Error: File failed to open.\n";
       throw err;
