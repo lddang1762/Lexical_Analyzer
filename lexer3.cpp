@@ -12,8 +12,11 @@ vector<string> keywords = {"int", "float", "bool","else","then","endif","while",
 vector<char> separators = {'\'', '(', ')', '{', '}', '[', ']', ',' , '.',':',';'};// ! and ' '(space) are special case
 vector<char> operators = {'*', '+', '-', '=', '/', '>', '<', '%'};
 
+
+
 void lexer();
 void readfile();
+int char_to_col(char c);
 int transitionState(int state, char c);
 bool isAcceptedState(int state);
 
@@ -26,7 +29,21 @@ int main(int argc, char* argv[]){
 }
 
 void lexer(){
+  do{
+    
+  }while(!inFile.eof());
+}
 
+int char_to_col(char c){
+  return 0;
+}
+
+int transitionState(int state, char c){
+  return 0;
+}
+
+bool isAcceptedState(int state){
+  return true;
 }
 
 void readfile(){
